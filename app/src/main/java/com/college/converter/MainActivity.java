@@ -3,6 +3,7 @@ package com.college.converter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.w("MainActivity", "Info");
+
         Button buttonConvert = findViewById(R.id.convertButton);
 
         buttonConvert.setOnClickListener( view ->  {
@@ -51,5 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             resultView.setText( resultFloat + " Euros" );
         }
+
+        Log.w("MainActivity", "Info");
     }
 }
