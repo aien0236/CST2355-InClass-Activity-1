@@ -34,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button buttonConvert = findViewById(R.id.convertButton);
 
-        buttonConvert.setOnClickListener( view ->  {
-            convertCurrency(view);
-        } );
+        buttonConvert.setOnClickListener(this::convertCurrency);
     }
 
     public void convertCurrency(View view) {
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
             Float resultFloat = inputAmountDecimal * CONVERSION_RATE;
 
-            resultView.setText( resultFloat + " Euros" );
+            resultView.setText( resultFloat + getString(R.string.euros) );
         }
 
         Log.w("MainActivity", "Info");
